@@ -2,6 +2,8 @@
 
 QuickLM is a lightweight macOS menu bar application that provides a fast and seamless way to interact with local Large Language Models (LLMs) powered by LM Studio.
 
+![QuickLM Screenshot](resources/app.png)
+
 ## Features
 
 - **Quick Access**: Launch a prompt window instantly from your menu bar.
@@ -20,7 +22,7 @@ QuickLM is a lightweight macOS menu bar application that provides a fast and sea
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/gpt_action.git
+   git clone https://github.com/fjasensi/QuickLM.git
    ```
 2. Open `gpt_action.xcodeproj` in Xcode.
 3. Build and run the application.
