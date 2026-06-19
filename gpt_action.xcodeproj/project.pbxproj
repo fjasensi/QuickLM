@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		8BA5DF742FD978A9005B3123 /* gpt_action.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpt_action.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA5DF742FD978A9005B3123 /* QuickLM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickLM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		8BA5DF752FD978A9005B3123 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BA5DF742FD978A9005B3123 /* gpt_action.app */,
+				8BA5DF742FD978A9005B3123 /* QuickLM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BA5DF732FD978A9005B3123 /* gpt_action */ = {
+		8BA5DF732FD978A9005B3123 /* QuickLM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BA5DF7F2FD978AA005B3123 /* Build configuration list for PBXNativeTarget "gpt_action" */;
+			buildConfigurationList = 8BA5DF7F2FD978AA005B3123 /* Build configuration list for PBXNativeTarget "QuickLM" */;
 			buildPhases = (
 				8BA5DF702FD978A9005B3123 /* Sources */,
 				8BA5DF712FD978A9005B3123 /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				8BA5DF762FD978A9005B3123 /* gpt_action */,
 			);
-			name = gpt_action;
+			name = QuickLM;
 			packageProductDependencies = (
 			);
-			productName = gpt_action;
-			productReference = 8BA5DF742FD978A9005B3123 /* gpt_action.app */;
+			productName = QuickLM;
+			productReference = 8BA5DF742FD978A9005B3123 /* QuickLM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BA5DF732FD978A9005B3123 /* gpt_action */,
+				8BA5DF732FD978A9005B3123 /* QuickLM */,
 			);
 		};
 /* End PBXProject section */
@@ -178,7 +178,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -235,7 +235,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -248,20 +248,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = gpt_action/QuickLM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHSAKB26KK;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickLM;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "QuickLM connects to LM Studio on localhost.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "atlas.gpt-action";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlas.quicklm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -278,20 +284,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = gpt_action/QuickLM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHSAKB26KK;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickLM;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "QuickLM connects to LM Studio on localhost.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "atlas.gpt-action";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlas.quicklm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -315,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BA5DF7F2FD978AA005B3123 /* Build configuration list for PBXNativeTarget "gpt_action" */ = {
+		8BA5DF7F2FD978AA005B3123 /* Build configuration list for PBXNativeTarget "QuickLM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BA5DF802FD978AA005B3123 /* Debug */,
