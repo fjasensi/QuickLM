@@ -20,18 +20,20 @@ QuickLM is a lightweight macOS menu bar application that provides a fast and sea
 
 ## Installation
 
+### Quick Start (Recommended)
+1. Download the latest `QuickLM.zip` from the [Releases](https://github.com/fjasensi/QuickLM/releases) page.
+2. Unzip the file and move `QuickLM.app` to your `/Applications` folder.
+3. Since the app is not notarized, you may need to **Right-click** the app and select **Open** to bypass the macOS security warning the first time you launch it.
+
+### Build from Source
+If you prefer to build the application yourself:
 1. Clone the repository:
    ```bash
    git clone https://github.com/fjasensi/QuickLM.git
    ```
 2. Open `gpt_action.xcodeproj` in Xcode.
 3. Build the project (Cmd + B).
-   ![Build Project](resources/1_build.png)
-4. In the Project Navigator, find the product, right-click it, and select "Show in Finder".
-   ![Show in Finder](resources/2_show_folder.png)
-5. Copy the `QuickLM.app` file to your `/Applications` folder.
-   ![Move to Applications](resources/3_move_to_application_folder.png)
-6. Launch QuickLM from your Applications folder or via Spotlight.
+4. Right-click the product in Xcode and select "Show in Finder", then move `QuickLM.app` to your `/Applications` folder.
 
 ## Usage
 
