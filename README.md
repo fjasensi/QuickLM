@@ -9,7 +9,7 @@ QuickLM is a lightweight macOS menu bar application that provides a fast and sea
 - **Quick Access**: Launch a prompt window instantly from your menu bar.
 - **Local LLM Integration**: Connects to LM Studio's local server for private and fast inference.
 - **Context Support**: Maintains conversation history within a session for continuous dialogue.
-- **Customizable**: Configure the system prompt, temperature, and Base URL in the preferences.
+- **Customizable**: Configure the system prompt, temperature, response timeout, and Base URL in the preferences.
 - **Keyboard Shortcuts**: Set up custom hotkeys to open the prompt window quickly.
 - **Markdown Support**: Responses are rendered in Markdown for better readability.
 

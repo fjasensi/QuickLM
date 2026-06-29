@@ -16,6 +16,10 @@ final class AppSettings: ObservableObject {
         didSet { defaults.set(temperature, forKey: Keys.temperature) }
     }
 
+    @Published var responseTimeout: Double {
+        didSet { defaults.set(responseTimeout, forKey: Keys.responseTimeout) }
+    }
+
     @Published var selectedHotkeyID: String {
         didSet { defaults.set(selectedHotkeyID, forKey: Keys.selectedHotkeyID) }
     }
@@ -37,6 +41,12 @@ final class AppSettings: ObservableObject {
             temperature = defaults.double(forKey: Keys.temperature)
         }
 
+        if defaults.object(forKey: Keys.responseTimeout) == nil {
+            responseTimeout = Defaults.responseTimeout
+        } else {
+            responseTimeout = defaults.double(forKey: Keys.responseTimeout)
+        }
+
         selectedHotkeyID = defaults.string(forKey: Keys.selectedHotkeyID) ?? HotkeyShortcut.optionSpace.id
     }
 
@@ -44,7 +54,8 @@ final class AppSettings: ObservableObject {
         AppSettingsSnapshot(
             baseURL: baseURL.trimmingCharacters(in: .whitespacesAndNewlines),
             systemPrompt: systemPrompt.trimmingCharacters(in: .whitespacesAndNewlines),
-            temperature: max(0, min(temperature, 2))
+            temperature: max(0, min(temperature, 2)),
+            responseTimeout: max(30, min(responseTimeout, 600))
         )
     }
 
@@ -52,6 +63,7 @@ final class AppSettings: ObservableObject {
         baseURL = Defaults.baseURL
         systemPrompt = Defaults.systemPrompt
         temperature = Defaults.temperature
+        responseTimeout = Defaults.responseTimeout
         selectedHotkeyID = HotkeyShortcut.optionSpace.id
     }
 
@@ -59,6 +71,7 @@ final class AppSettings: ObservableObject {
         static let baseURL = "baseURL"
         static let systemPrompt = "systemPrompt"
         static let temperature = "temperature"
+        static let responseTimeout = "responseTimeout"
         static let selectedHotkeyID = "selectedHotkeyID"
     }
 
@@ -66,5 +79,6 @@ final class AppSettings: ObservableObject {
         static let baseURL = "http://localhost:1234/v1"
         static let systemPrompt = "You are a concise assistant for quick questions. Answer clearly and directly."
         static let temperature = 0.3
+        static let responseTimeout = 180.0
     }
 }

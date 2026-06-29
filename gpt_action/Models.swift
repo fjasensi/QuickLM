@@ -5,6 +5,7 @@ struct AppSettingsSnapshot {
     let baseURL: String
     let systemPrompt: String
     let temperature: Double
+    let responseTimeout: TimeInterval
 }
 
 struct HotkeyShortcut: Identifiable, Equatable {

@@ -29,6 +29,15 @@ struct PreferencesView: View {
                         .monospacedDigit()
                         .frame(width: 36, alignment: .trailing)
                 }
+
+                HStack {
+                    Text("Response Timeout")
+                        .frame(width: 130, alignment: .leading)
+                    Slider(value: $settings.responseTimeout, in: 30...600, step: 15)
+                    Text(timeoutLabel)
+                        .monospacedDigit()
+                        .frame(width: 56, alignment: .trailing)
+                }
             }
 
             Section("Keyboard") {
@@ -51,6 +60,16 @@ struct PreferencesView: View {
         }
         .formStyle(.grouped)
         .padding()
-        .frame(width: 560, height: 430)
+        .frame(width: 560, height: 470)
+    }
+
+    private var timeoutLabel: String {
+        let seconds = Int(settings.responseTimeout)
+
+        if seconds >= 60, seconds % 60 == 0 {
+            return "\(seconds / 60)m"
+        }
+
+        return "\(seconds)s"
     }
 }
